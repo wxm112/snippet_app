@@ -16,6 +16,10 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'bootstrap-sass'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   gem 'pry-rails'
   gem 'pry-stack_explorer'
