@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.destroy_all
+
+u1 = User.create(:name => 'May', :password => 'chicken', :password_confirmation => 'chicken')
+u2 = User.create(:name => 'Per', :password => 'chicken', :password_confirmation => 'chicken')
+u3 = User.create(:name => 'Karrin', :password => 'chicken', :password_confirmation => 'chicken')
