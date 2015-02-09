@@ -1,4 +1,7 @@
-%h1= "Welcome " + @user.name
+%h1= "Name: " + @user.name
+%h1= "User_id: " + @user.id.to_s
+%h1= "Admin?: " + @user.is_admin.to_s
+
 
 
     
@@ -8,6 +11,7 @@
 
 
 %button= link_to "Update", edit_user_path
+%button= link_to "Back", users_path
 
 
 

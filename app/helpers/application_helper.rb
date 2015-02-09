@@ -4,8 +4,8 @@ module ApplicationHelper
     
 
     if @current_user.present?
-      if @current_user.is_admin?
-        links += "<li>#{link_to('All users', uers_path)}</li>"
+      if @current_user.is_admin
+        links += "<li>#{link_to('All users', users_path)}</li>"
       end
       links += "<li>#{link_to('My snippets ', snippets_path)}</li>"
       links += "<li>#{link_to('New snippet ', new_snippet_path)}</li>"
