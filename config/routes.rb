@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, :only => [:new, :create, :edit, :show, :update,:index]
   resources :snippets
 
-  get '/snippets/json/:id' =>'json#show'
+  get 'api/v1/snippets/:id' =>'json#show'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
