@@ -1,0 +1,6 @@
+%h2= "Name: " + @snippet.name
+%h2= "Content: " + @snippet.content
+
+
+%button= link_to('Edit snippet', edit_snippet_path(@snippet.id))
+%button= link_to('Delete snippet', snippet_path(@snippet.id), :method => :delete)

@@ -1,0 +1,2 @@
+module SnipptesHelper
+end

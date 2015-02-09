@@ -1,0 +1,13 @@
+= form_for @snippet do |f|
+  %div.form-group
+  = f.label :name
+  = f.text_field :name, :required => true, :autofocus => true, :class => 'form-control'
+
+  = f.label :content
+  = f.text_field :content, :required => true, :class => 'form-control'
+
+  
+  = f.hidden_field :user_id, :value => @current_user.id
+
+
+  = f.submit "Create snippet"

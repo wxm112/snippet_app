@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  get 'new/create'
-
-  get 'new/destroy'
-
   root :to => 'pages#home'
 
   resources :users, :only => [:new, :create, :edit, :show, :update,:index]
+  resources :snippets
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

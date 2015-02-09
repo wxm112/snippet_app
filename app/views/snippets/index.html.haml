@@ -1,0 +1,5 @@
+%h1 My snippets
+
+%ul
+  -@snippets.each do |snippet|
+    %li= link_to(snippet.name, snippet_path(snippet.id))
