@@ -1,8 +1,10 @@
 class JsonController < ApplicationController
   def show
-    if Snippet.find_by :name => params[:name]
-      @snippet = Snippet.find_by :name => params[:name]
+    @snippet = Snippet.find_by :id => params[:id]
+    if @snippet.nil?
+      render nothing: true, status: 404
+    else
+      render json: @snippet
     end
-    render json: @snippet
   end
 end
