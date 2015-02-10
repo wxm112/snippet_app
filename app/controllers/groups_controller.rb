@@ -33,6 +33,11 @@ class GroupsController < ApplicationController
     @group.destroy
     redirect_to(groups_path)
   end
+
+  def add 
+    @snippet = Snippet.new
+    @group = Group.find_by :id => params[:id]
+  end
   
   private
   

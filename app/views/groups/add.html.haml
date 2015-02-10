@@ -1,0 +1,9 @@
+= form_for @snippet, :method => :post, :url => save_group_snippet_path(@group.id) do |f|
+  %div.form-group
+  = f.label :name
+  = f.text_field :name, :required => true, :autofocus => true, :class => 'form-control'
+
+  = f.label :content
+  = f.text_field :content, :required => true, :class => 'form-control'
+
+  = f.submit "Create a group snippet"

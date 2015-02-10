@@ -25,7 +25,8 @@ class SnippetsController < ApplicationController
   end
 
   def index
-    @snippets = @current_user.snippets
+    personal_snippets = Group.find_by :name => @current_user.name 
+    @snippets = personal_snippets.snippets
   end
 
   def create
@@ -34,6 +35,13 @@ class SnippetsController < ApplicationController
     @snippet.groups << @group
     @snippet.save
     redirect_to snippets_path
+  end
+
+  def save
+    @snippet = Snippet.create snippet_params
+    group = Group.find params[:id]
+    @snippet.groups << group
+    redirect_to group_path
   end
 
   def share
