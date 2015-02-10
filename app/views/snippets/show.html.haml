@@ -1,7 +1,13 @@
 %h2= "Name: " + @snippet.name
 %h2= "ID: " + @snippet.id.to_s
 %h2= "Content: " + @snippet.content
+%h2= "Groups: " 
+%ul
+-@snippet.groups.each do |group|
+  %li= link_to(group.name, group_path(group.id))
 
 
 %button= link_to('Edit snippet', edit_snippet_path(@snippet.id))
 %button= link_to('Delete snippet', snippet_path(@snippet.id), :method => :delete)
+%button= link_to('Share snippet', share_snippet_path(@snippet.id))
+

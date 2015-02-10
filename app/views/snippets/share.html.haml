@@ -1,0 +1,10 @@
+%h1 Plese choose the group you want to share with
+
+= form_for @snippet, :method => :post, :url => send_snippet_path(@snippet.id)  do |f|
+  %div.form-group
+  
+  = f.select :groups, Group.all.collect {|g| [g.name, g.id]}
+  = f.submit "Share snippet"
+
+
+  

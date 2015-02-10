@@ -4,10 +4,12 @@ module ApplicationHelper
     
 
     if @current_user.present?
-      if @current_user.is_admin
-        links += "<li>#{link_to('All users', users_path)}</li>"
-      end
+      # if @current_user.is_admin
+      links += "<li>#{link_to('All users', users_path)}</li>"
+      # end
+      links += "<li>#{link_to('My groups ', groups_path)}</li>"
       links += "<li>#{link_to('My snippets ', snippets_path)}</li>"
+      links += "<li>#{link_to('New group ', new_group_path)}</li>"
       links += "<li>#{link_to('New snippet ', new_snippet_path)}</li>"
       links += "<li>#{link_to('Sign out '+ @current_user.name, login_path, :method => :delete)}</li>"
     else

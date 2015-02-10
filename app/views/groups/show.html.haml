@@ -1,0 +1,14 @@
+%h2= "Name: " + @group.name
+%h2= "ID: " + @group.id.to_s
+%h2= "Mebers:" 
+%ul
+-@group.users.each do |user|
+  %li= link_to(user.name, user_path(user.id))
+
+%h2= "Snippets:" 
+%ul
+-@group.snippets.each do |snippet|
+  %li= link_to(snippet.name, snippet_path(snippet.id))
+
+%button= link_to('Edit group', edit_group_path(@group.id))
+%button= link_to('Delete group', group_path(@group.id), :method => :delete)
