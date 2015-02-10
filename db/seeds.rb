@@ -28,11 +28,6 @@ g5 = Group.create(:name => 'Per')
 g6 = Group.create(:name => 'Karrin')
 g7 = Group.create(:name => 'Bruno')
 
-# Associate users and snippets:
-u1.snippets << s1 << s4
-u2.snippets << s2
-u3.snippets << s3
-u4.snippets << s4
 
 # Associate users and groups:
 u1.groups << g4 << g1

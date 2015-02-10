@@ -39,11 +39,6 @@ ActiveRecord::Schema.define(version: 20150210000932) do
     t.text     "content"
   end
 
-  create_table "snippets_users", force: :cascade do |t|
-    t.integer "snippet_id"
-    t.integer "user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "password_digest"
