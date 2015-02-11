@@ -18,13 +18,18 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new user_params
-    if @user.save
-      session[:user_id] = @user.id
-      group = Group.create(name: params[:user][:name], is_personal: true) 
-      group.users << @user
-      redirect_to(user_path(@user.id))
-    else
-      render :new
+    respond_to do |format|
+      if @user.save
+        ExampleMailer.active_email(@user).deliver_now
+        format.html { redirect_to user_path(@user.id), notice: 'User was successfully created.' }
+        format.json { render :show, status: :created, location: @user }
+        session[:user_id] = @user.id
+        group = Group.create(name: params[:user][:name], is_personal: true)
+        group.users << @user
+      else
+        format.html { render :new }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -34,8 +39,8 @@ class UsersController < ApplicationController
   end
 
   private
-  def user_params
-    params.require(:user).permit(:name, :password, :password_confirmation)
-  end
 
+  def user_params
+    params.require(:user).permit(:name, :password, :password_confirmation, :email)
+  end
 end
