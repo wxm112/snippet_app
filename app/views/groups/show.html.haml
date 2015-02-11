@@ -1,5 +1,6 @@
 %h2= "Name: " + @group.name
 %h2= "ID: " + @group.id.to_s
+%h2= "Personal group: " + @group.is_personal.to_s
 %h2= "Mebers:" 
 %ul
 -@group.users.each do |user|
@@ -10,6 +11,7 @@
 -@group.snippets.each do |snippet|
   %li= link_to(snippet.name, snippet_path(snippet.id))
 
-%button= link_to('Edit group', edit_group_path(@group.id))
-%button= link_to('Delete group', group_path(@group.id), :method => :delete)
+- unless @group.is_personal
+  %button= link_to('Edit group', edit_group_path(@group.id))
+  %button= link_to('Delete group', group_path(@group.id), :method => :delete)
 %button= link_to('Add group snippet', add_group_snippet_path(@group.id))

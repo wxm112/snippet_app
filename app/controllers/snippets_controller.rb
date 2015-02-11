@@ -1,7 +1,4 @@
 class SnippetsController < ApplicationController
-  def new
-    @snippet = Snippet.new
-  end
 
   def edit
     @snippet = Snippet.find params[:id]
@@ -30,14 +27,6 @@ class SnippetsController < ApplicationController
   end
 
   def create
-    @snippet = Snippet.new snippet_params
-    @group = Group.find_by :name => @current_user.name
-    @snippet.groups << @group
-    @snippet.save
-    redirect_to snippets_path
-  end
-
-  def save
     @snippet = Snippet.create snippet_params
     group = Group.find params[:id]
     @snippet.groups << group
@@ -46,6 +35,9 @@ class SnippetsController < ApplicationController
 
   def share
     @snippet = Snippet.find params[:id]
+    personal_groups = Group.where :is_personal => true
+    included_groups = personal_groups.select {|g| g.snippets.include? @snippet}
+    @groups = personal_groups - included_groups
   end
 
   def add_to_group

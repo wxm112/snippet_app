@@ -7,7 +7,6 @@
 #  password_digest :string
 #  created_at      :datetime
 #  updated_at      :datetime
-#  is_admin        :boolean          default("false")
 #
 
 class User < ActiveRecord::Base

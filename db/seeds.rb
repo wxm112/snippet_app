@@ -23,10 +23,10 @@ s4 = Snippet.create(:name => 'activity', :content => 'Prepare for the new baby')
 g1 = Group.create(:name => 'AMA')
 g2 = Group.create(:name => 'CBC')
 g3 = Group.create(:name => 'GA')
-g4 = Group.create(:name => 'May')
-g5 = Group.create(:name => 'Per')
-g6 = Group.create(:name => 'Karrin')
-g7 = Group.create(:name => 'Bruno')
+g4 = Group.create(:name => 'May', :is_personal => true)
+g5 = Group.create(:name => 'Per', :is_personal => true)
+g6 = Group.create(:name => 'Karrin', :is_personal => true)
+g7 = Group.create(:name => 'Bruno', :is_personal => true)
 
 
 # Associate users and groups:
