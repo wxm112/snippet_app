@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :groups
   resources :snippets, :only => [:edit, :show, :update, :index, :destroy]
 
+  get '/users/:id/confirm/:confirmation_code' => 'users#active', as: :active_account
+
   get '/snippets/:id/share' => 'snippets#share', as: :share_snippet
   post '/snippets/:id/add_to_group' => 'snippets#add_to_group', as: :send_snippet
 

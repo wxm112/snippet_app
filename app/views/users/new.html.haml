@@ -20,5 +20,7 @@
   = f.label :email
   = f.text_field :email, :class => 'form-control'
 
+  = f.hidden_field :confirmation_code, :value => @confirmation_code, :class => 'form-control'
+
 
   = f.submit "Sign up"

@@ -6,7 +6,7 @@
   <body>
     <h1>Hi <%= @user.name %></h1>
     <p>
-      Sample mail sent using smtp.
+      Clink here to active your account: <a href="http://localhost:3000/users/<%= @user.id %>/confirm/<%= @user.confirmation_code %>">Active your account</a>
     </p>
   </body>
 </html>

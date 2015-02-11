@@ -1,2 +1,2 @@
 Hi <%= @user.name %>
-Sample mail sent using smtp.
+Clink here to active your account: <%= link_to "Active your account", active_account_path(@user.id,@user.confirmation_code) %>
