@@ -5,4 +5,11 @@ class ExampleMailer < ApplicationMailer
     @user = user
     mail(to: @user.email, subject: 'Active your account')
   end
+
+  def add_to_group_email(user,invitater,group)
+    @user = user
+    @current_user = invitater
+    @group = group
+    mail(to: @user.email, subject: 'Invitation to a group')
+  end
 end

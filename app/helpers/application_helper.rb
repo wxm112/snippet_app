@@ -6,10 +6,6 @@ module ApplicationHelper
 
     if @current_user.present?
       group = Group.find_by :name => @current_user.name
-
-      # if @current_user.is_admin
-      # links += "<li>#{link_to('All users', users_path)}</li>"
-      # end
       links += "<li>#{link_to('My groups ', groups_path)}</li>"
       links += "<li>#{link_to('My personal snippets ', snippets_path)}</li>"
       links += "<li>#{link_to('New group ', new_group_path)}</li>"

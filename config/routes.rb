@@ -12,8 +12,10 @@ Rails.application.routes.draw do
 
   get  '/groups/:id/add_group_snippet' => 'groups#add', as: :add_group_snippet
   post '/groups/:id/snippets' => 'snippets#create', as: :save_group_snippet
-  # get '/groups/:id/add_user' => 'groups#add_user', as: :add_user
-  # post '/groups/:id/users' => 'groups#create_user', as: :save_user
+  get '/groups/:id/add_user_to_group' => 'groups#add_user_to_group', as: :add_user
+  get '/groups/:id/choose_user_to_group' => 'groups#choose_user_to_group', as: :choose_user
+  get '/groups/:id/save_user_to_group/:user_id' => 'groups#save_user_to_group', as: :save_user
+  
 
   get 'api/v1/snippets/:id' =>'json#show'
 

@@ -38,6 +38,31 @@ class GroupsController < ApplicationController
     @snippet = Snippet.new
     @group = Group.find_by :id => params[:id]
   end
+
+  def add_user_to_group
+    @group = Group.find_by :id => params[:id]
+    @users = User.all - [@current_user]
+  end
+
+  def choose_user_to_group
+    @user = User.find params[:group][:users]
+    @group = Group.find params[:id]
+    respond_to do |format|
+      ExampleMailer.add_to_group_email(@user,@current_user,@group).deliver_now
+      format.html { render plain: "You have sent the Invitation to #{@user.name} succeessfully."}
+      format.json { render :show, status: :created, location: @user }
+    end
+
+  end 
+
+  def save_user_to_group
+    @user = User.find params[:user_id]
+    @group = Group.find params[:id]
+    unless @group.users.include? @user
+      @group.users << @user
+      end
+    render plain: "You have been added to #{@group.name} succeessfully."
+  end
   
   private
   

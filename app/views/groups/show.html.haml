@@ -15,5 +15,5 @@
   %button= link_to('Edit group', edit_group_path(@group.id))
   %button= link_to('Delete group', group_path(@group.id), :method => :delete)
 %button= link_to('Add snippet', add_group_snippet_path(@group.id))
-/ %button= link_to('Add user to this group', add_user_path(@group.id))
+%button= link_to('Add user', add_user_path(@group.id))
 
