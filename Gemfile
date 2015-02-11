@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'haml'
 gem 'bootstrap-sass'
+gem 'validates_email_format_of'
 
 group :production do
   gem 'rails_12factor'
