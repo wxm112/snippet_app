@@ -21,6 +21,8 @@ class UsersController < ApplicationController
     @user = User.new user_params
     respond_to do |format|
       if @user.save
+        group = Group.create(name: @user.name, is_personal: true)
+        group.users << @user
         ExampleMailer.active_email(@user).deliver_now
         format.html { redirect_to user_path(@user.id), notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
@@ -37,8 +39,6 @@ class UsersController < ApplicationController
       @user.confirmed = true
       @user.save
       session[:user_id] = @user.id
-      group = Group.create(name: @user.name, is_personal: true)
-      group.users << @user
       redirect_to user_path(@user.id)
     end
   end
