@@ -6,27 +6,26 @@
   margin-top: 70px;
 }
 
-.show-box {
-  border: 1px solid;
-  padding:0;
-}
-
 .demo-box-caption {
   height: 100px;
   border-top: 1px solid;
   background-color:rgb(252, 214, 138);
   vertical-align: middle;
+  padding: 5px 10px;
 }
 
-.demo-box-code {
-  height: 60px;
-  background-color:#eeeeee;
+.demo-box-code, .demo-box-result {
+  //background-color:#eeeeee;
   vertical-align: middle;
+  padding: 5px 10px;
 }
 
-.demo-box-result {
-  height: 60px;
-  background-color:#eeeeee;
-  vertical-align: middle;
+h1,h2,h3,h4,h5 {
+  font-family: 'Titillium Web', sans-serif;
 }
 
+h1 {
+  font-weight: 100;
+  font-size: 30px;
+  margin-bottom: 1em;
+}

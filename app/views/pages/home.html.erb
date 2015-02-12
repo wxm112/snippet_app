@@ -1,53 +1,34 @@
 <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right" >
-
-        <div class="col-xs-6 col-sm-12">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-          <div class="jumbotron">
-            <h1>data-snippet.io!</h1>
-            <p data-snippet="5">...</p>
+  <div>
+    <div class="jumbotron">
+      <h1>data-snippet.io</h1>
+      <p data-snippet="5">...</p>
+    </div>
+    <div class="row">
+      <h1>What is data-snippet ?</h1>
+      <div>
+        <div class="col-md-6">
+          <div class="demo-box-code">
+            <pre>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src="http://yoursite.com/data-snippet.js"&gt;&lt;/script&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p data-snippet="6"&gt;(this text is a placeholder)&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
           </div>
-          <div class="row">
-            <h2>What is data-snippet ?</h2>
-            <br>
-            <br>
-            <br>
-            <div class="col-xs-9 col-lg-12">
-              <div class="col-xs-3 col-lg-4 col-md-offset-1 show-box">
-                <div class="col-xs-9 col-lg-12 demo-box-code">
-                  &lt;p&gt; data-snippet="demo-box"&gt;(this is a placeholder)&lt;/p&gt;
-                </div>
-                <div class="col-xs-9 col-lg-12 demo-box-caption">
-                This means: I want the snippet with ID <b>demo-box</b> to be shown here.
-                </div>
-              </div>
-              <div class="col-xs-3 col-lg-4 col-md-offset-1 show-box">
-                <div class="col-xs-9 col-lg-12 demo-box-result">
-                  (this text is a placeholder)
-                </div>
-                <div class="col-xs-9 col-lg-12 demo-box-caption">
-                  You should see the snippet in the above box after it is loaded. If you see "(this text is a placeholder)" for more than a few moments, your Internet connection is possibly slow or broken.
-                </div>
-              </div>
-            </div>
-          <br>
-          <br>
-          <br>
-          <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br> 
-          <p>data-snippet manages small snippets of text that once included on any site can be updated without the need of a CMS. TidBit requires no change to your IT infrastructure (as long as you allow your users access to the Internet) and requires no setup (as long as your users are running a modern browser with JavaScript enabled).</p>  
-            
-      </div><!--/row-->
-        
-
-      <hr>
+        </div>
+        <div class="col-md-6" style="margin-top: 5em">
+          <div class="demo-box-result">
+            <p data-snippet="6">(this text is a placeholder)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
