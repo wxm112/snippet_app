@@ -11,28 +11,12 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require normalize-rails
  *= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "data-snippet"
 
-body {
-  font-family: 'cambria';
-  margin-left: 50px;
-  margin-right: 50px;
-}
 
-.main-title {
-  background-color: #444;
-  color: #ddd;
-  font-size: 100px;
-  font-family: 'Titillium Web', sans-serif;
-  font-weight: 100;
-  line-height: 1.5em;
-  margin: 0;
-  width: calc(100% + 100px);
-  padding-left: .25em;
-  margin-left: -50px;
-  margin-right: -50px;
-}

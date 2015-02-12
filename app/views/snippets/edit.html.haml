@@ -2,11 +2,11 @@
   %div.form-group
   = f.label :name
   = f.text_field :name, :required => true, :value => @snippet.name, :autofocus => true, :class => 'form-control'
-
+  %div.form-group
   = f.label :content
   = f.text_field :content, :required => true, :class => 'form-control'
 
 
   = f.hidden_field :user_id, :value => @current_user.id
-
+  %div.form-group
   = f.submit "Update"

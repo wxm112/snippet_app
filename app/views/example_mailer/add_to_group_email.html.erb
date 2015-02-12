@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.name %></h1> 
+    <p>
+      <%= @current_user.name %> invited you to <%= @group.name %>
+    </p>
+
+    <button><%= link_to('Accept', save_user_url(@group.id, @user.id)) %></button>
+  </body>
+</html>
+

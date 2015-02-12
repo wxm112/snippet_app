@@ -2,8 +2,8 @@
 
 = form_for @snippet, :method => :post, :url => send_snippet_path(@snippet.id)  do |f|
   %div.form-group
-  
   = f.select :groups, @groups.collect {|g| [g.name, g.id]}
+  %div.form-group
   = f.submit "Share snippet"
 
 

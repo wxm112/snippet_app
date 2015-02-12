@@ -1,0 +1,7 @@
+%h1 Plese choose user to add to this group
+
+= form_for @group, :method=> :get, :url => choose_user_path(@group.id) do |f|
+  %div.form-group
+  
+  = f.select :users, @users.collect {|u| [u.name, u.id]}
+  = f.submit "Add user"

@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'bootstrap-sass'
 gem 'validates_email_format_of'
+gem 'normalize-rails'
 
 group :production do
   gem 'rails_12factor'

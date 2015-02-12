@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/groups/:id/save_user_to_group/:user_id' => 'groups#save_user_to_group', as: :save_user
   
 
-  get 'api/v1/snippets/:id' =>'json#show'
+  get 'api/v1/snippets/:id' =>'json#show', :as => :json_snippet
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

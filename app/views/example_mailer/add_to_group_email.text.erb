@@ -1,0 +1,4 @@
+Hi <%= @user.name %>
+<%= @current_user.name %> invited you to <%= @group.name %>
+<%= link_to('Accept', save_user_path(@group.id,@user.id)) %>
+    
