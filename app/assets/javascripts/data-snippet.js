@@ -18,7 +18,7 @@
         console.error("data-snippet.io: response had unexpected HTTP status code (" + request.status + ")");
       }
     };
-    request.open("GET", "http://localhost:3000/api/v1/snippets/" + id, true);
+    request.open("GET", "http://api.data-snippet.io/api/v1/snippets/" + id, true);
     request.send();
   }
 
