@@ -83,5 +83,3 @@ production:
   database: snippet_app_production
   username: snippet_app
   password: <%= ENV['SNIPPET_APP_DATABASE_PASSWORD'] %>
-  gmail_username: ENV['gmail_username']
-  gmail_password: ENV['gmail_password']
