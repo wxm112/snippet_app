@@ -1,17 +1,15 @@
 .content-container {
-  margin-top :70px;
+  margin-top :100px;
 }
 
-.jumbotron {
-  margin-top: 70px;
+.result-text {
+  padding-left: 10px;
 }
 
-.demo-box-caption {
-  height: 100px;
-  border-top: 1px solid;
-  background-color:rgb(252, 214, 138);
+
+.result {
+  background-color:#8AA1FC;
   vertical-align: middle;
-  padding: 5px 10px;
 }
 
 .demo-box-code, .demo-box-result {
@@ -28,4 +26,16 @@ h1 {
   font-weight: 100;
   font-size: 30px;
   margin-bottom: 1em;
+}
+
+table, th, td {
+  margin-top: 70px;
+}
+
+th,td {
+  padding: 15px;
+}
+
+a {
+  font-size: 20px;
 }

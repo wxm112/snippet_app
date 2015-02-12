@@ -1,10 +1,22 @@
-%h2= "Name: " + @snippet.name
-%h2= "ID: " + @snippet.id.to_s
-%h2= "Content: " + @snippet.content
-%h2= "Groups: " 
-%ul
--@snippet.groups.each do |group|
-  %li= link_to(group.name, group_path(group.id))
+%table.table.table-striped
+  %tr
+    %th
+      Name
+    %td= @snippet.name 
+  %tr
+    %th
+      ID
+    %td= @snippet.id.to_s
+  %tr
+    %th
+      Content
+    %td= @snippet.content
+  %tr
+    %th
+      Groups
+    %td
+      -@snippet.users.each do |group|
+        = link_to(group.name, group_path(group.id))
 
 
 %button.btn.btn-default

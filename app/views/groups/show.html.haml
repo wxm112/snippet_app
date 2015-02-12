@@ -1,15 +1,29 @@
-%h2= "Name: " + @group.name
-%h2= "ID: " + @group.id.to_s
-%h2= "Personal group: " + @group.is_personal.to_s
-%h2= "Mebers:" 
-%ul
--@group.users.each do |user|
-  %li= link_to(user.name, user_path(user.id))
-
-%h2= "Snippets:" 
-%ul
--@group.snippets.each do |snippet|
-  %li= link_to(snippet.name, snippet_path(snippet.id))
+%table.table.table-striped
+  %tr
+    %th
+      Name
+    %td= @group.name
+  %tr
+    %th
+      ID
+    %td= @group.id.to_s
+  %tr
+    %th
+      Personal Group?
+    %td= @group.is_personal.to_s
+  %tr
+    %th
+      Mebers
+    %td
+      -@group.users.each do |user|
+        = link_to(user.name, user_path(user.id))
+  %tr
+    %th
+      Snippets
+    %td
+      -@group.snippets.each do |snippet|
+        = link_to(snippet.name, snippet_path(snippet.id))
+   
 
 - unless @group.is_personal
   %button.btn.btn-default
@@ -20,4 +34,6 @@
   = link_to('Add snippet', add_group_snippet_path(@group.id))
 %button.btn.btn-default
   = link_to('Add user', add_user_path(@group.id))
+
+  
 

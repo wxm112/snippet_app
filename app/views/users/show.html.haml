@@ -1,12 +1,25 @@
-%h1= "Name: " + @user.name
-%h1= "User_id: " + @user.id.to_s
+%table.table.table-striped
+  %tr
+    %th
+      Name
+    %td= @user.name 
+  %tr
+    %th
+      ID
+    %td= @user.id.to_s
+  %tr
+    %th
+      Groups
+    %td
+      -@user.groups.each do |group|
+        = link_to(group.name, group_path(group.id))
+  %tr
+    %th
+      Personal Snippets
+    %td
+      -@user.snippets.each do |snippet|
+        = link_to(snippet.name, snippet_path(snippet.id))
 
 
 %button.btn.btn-default
   =link_to("Update", edit_user_path)
-
-
-
-
-
-

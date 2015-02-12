@@ -6,26 +6,49 @@
     </div>
     <div class="row">
       <h1>What is data-snippet ?</h1>
-      <div>
-        <div class="col-md-6">
-          <div class="demo-box-code">
-            <pre>
+      <h2>Code example</h2>
+      <div class="demo-box-code">
+        <div class="col-md-6 box-1">  
+          <pre>
+&lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p &gt;First paragraph&lt;/p&gt;
+    &lt;p &gt;(this text is a placeholder)&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+          </pre>
+        </div>
+        <div class="col-md-6 box-2">
+          <pre>
 &lt;html&gt;
   &lt;head&gt;
     &lt;script src="http://yoursite.com/data-snippet.js"&gt;&lt;/script&gt;
     ...
   &lt;/head&gt;
   &lt;body&gt;
+    &lt;p &gt;First paragraph&lt;/p&gt;
     &lt;p data-snippet="6"&gt;(this text is a placeholder)&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-            </pre>
-          </div>
+          </pre>
         </div>
-        <div class="col-md-6" style="margin-top: 5em">
-          <div class="demo-box-result">
-            <p data-snippet="6">(this text is a placeholder)</p>
-          </div>
+      </div>
+      <h2>Results</h2>
+      <div class="demo-box-result">
+        <div class="col-md-6 result-box-1">
+          <pre class='result'>
+            <p class='result-text'>First paragraph</p>
+            <p class='result-text'>(this text is a placeholder)</p>
+          </pre>
+        </div>
+        <div class="col-md-6 result-box-2">
+          <pre class='result'>
+            <p class='result-text'>First paragraph</p>
+            <p data-snippet="6" class='result-text'>(this text is a placeholder)</p>
+          </pre>
         </div>
       </div>
     </div>
