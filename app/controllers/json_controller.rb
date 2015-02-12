@@ -1,9 +1,8 @@
 class JsonController < ApplicationController
 
-  before_filter :set_access_control_headers
+  after_action :set_access_control_headers
 
   def set_access_control_headers
-    binding.pry
     headers['Access-Control-Allow-Origin'] = '*'
   end
 
