@@ -6,7 +6,7 @@
   <body>
     <h1>Hi <%= @user.name %></h1>
     <p>
-      Clink here to active your account: <%= link_to "Active your account", active_account_url(@user.id,@user.confirmation_code) %>
+      Click here to activate your account: <%= link_to "Activate your account", activate_account_url(@user.id,@user.confirmation_code) %>
     </p>
   </body>
 </html>

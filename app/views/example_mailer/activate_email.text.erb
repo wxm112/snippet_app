@@ -1,0 +1,2 @@
+Hi <%= @user.name %>
+Click here to activate your account: <%= link_to "Activate your account", activate_account_url(@user.id,@user.confirmation_code) %>

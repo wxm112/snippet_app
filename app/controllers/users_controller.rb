@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def active
+  def activate
     @user = User.find params[:id]
     if @user.confirmation_code == params[:confirmation_code]
       @user.confirmed = true
