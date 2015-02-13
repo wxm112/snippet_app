@@ -18,6 +18,7 @@ gem 'haml'
 gem 'bootstrap-sass'
 gem 'validates_email_format_of'
 gem 'normalize-rails'
+gem 'rails_serve_static_assets'
 
 group :production do
   gem 'rails_12factor'
