@@ -24,7 +24,7 @@ class UsersController < ApplicationController
         group = Group.create(name: @user.name, is_personal: true)
         group.users << @user
         ExampleMailer.activate_email(@user).deliver_now
-        format.html { render plain: "Thak you for signing up #{@user.name}, please go to your email to activate your account."}
+        format.html { render plain: "Thank you for signing up #{@user.name}, please go to your email to activate your account."}
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
