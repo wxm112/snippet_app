@@ -3,7 +3,7 @@ class ExampleMailer < ApplicationMailer
 
   def activate_email(user)
     @user = user
-    mail(to: @user.email, subject: 'Active your account')
+    mail(to: @user.email, subject: 'Activate your account')
   end
 
   def add_to_group_email(user,invitater,group)
