@@ -12,13 +12,15 @@
       Groups
     %td
       -@user.groups.each do |group|
-        = link_to(group.name, group_path(group.id))
+        %ul
+          %li= link_to(group.name, group_path(group.id))
   %tr
     %th
       Personal Snippets
     %td
       -@user.snippets.each do |snippet|
-        = link_to(snippet.name, snippet_path(snippet.id))
+        %ul
+          %li= link_to(snippet.name, snippet_path(snippet.id))
 
 
 %button.btn.btn-default

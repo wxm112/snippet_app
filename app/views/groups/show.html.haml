@@ -16,13 +16,15 @@
       Mebers
     %td
       -@group.users.each do |user|
-        = link_to(user.name, user_path(user.id))
+        %ul
+          %li= link_to(user.name, user_path(user.id))
   %tr
     %th
       Snippets
     %td
       -@group.snippets.each do |snippet|
-        = link_to(snippet.name, snippet_path(snippet.id))
+        %ul
+          %li= link_to(snippet.name, snippet_path(snippet.id))
    
 
 - unless @group.is_personal

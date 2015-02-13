@@ -16,7 +16,8 @@
       Groups
     %td
       -@snippet.users.each do |group|
-        = link_to(group.name, group_path(group.id))
+        %ul
+          %li= link_to(group.name, group_path(group.id))
 
 
 %button.btn.btn-default
