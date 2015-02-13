@@ -22,7 +22,6 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-          <li><%= link_to('Download the js file', '/data-snippet.js.zip') %></li>
             <% if @current_user.present? %>
             <% @group = Group.find_by :name => @current_user.name %>
               <li><%= link_to('My groups ', groups_path) %></li>
