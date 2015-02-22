@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require knockout-3.3.0.js
 //= require turbolinks
 //= require_tree .
