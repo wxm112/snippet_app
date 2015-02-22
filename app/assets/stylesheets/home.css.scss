@@ -1,0 +1,14 @@
+@import 'colors';
+@import 'sizes';
+
+.main-intro {
+  color: #eee;
+  margin-top: 0;
+  background-color: $snippet_color;
+
+  padding: 15px 30px;
+
+  @media #{$device_large} {
+    padding: 10px 120px 90px 120px;
+  }
+}
