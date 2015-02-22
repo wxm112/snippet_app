@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root :to => 'pages#home'
+  root :to => 'pages#root'
+  get '/home' => 'pages#home', as: :user_home
 
   resources :users, :only => [:new, :create, :edit, :show, :update,:index]
   resources :groups
