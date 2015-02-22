@@ -23,21 +23,6 @@ h1 {
   margin-bottom: 1em;
 }
 
-.result-text {
-  padding-left: 10px;
-}
-
-.result {
-  background-color: #CAD3F7;
-  vertical-align: middle;
-  margin-bottom: 10em;
-}
-
-.demo-box-code, .demo-box-result {
-  vertical-align: middle;
-  padding: 5px 10px;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -81,14 +66,15 @@ nav > ul > li {
   }
 }
 
+div.centered-image {
+  text-align: center;
+}
+
 img.chart {
-//  position: absolute;
-//  right: 0;
-//  left: 0;
-//  margin-left: auto;
-//  margin-right: auto;
-  
   width: 100%;
+  @media #{$device_medium} {
+    width: 75%;
+  }
   @media #{$device_large} {
     width: 50%;
   }

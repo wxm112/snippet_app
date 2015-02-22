@@ -9,6 +9,21 @@
   padding: 15px 30px;
 
   @media #{$device_large} {
-    padding: 10px 120px 90px 120px;
+    padding: 10px 90px 90px 90px;
   }
+}
+
+.result-text {
+  padding-left: 10px;
+}
+
+.result {
+  background-color: #CAD3F7;
+  vertical-align: middle;
+  margin-bottom: 10em;
+}
+
+.demo-box-code, .demo-box-result {
+  vertical-align: middle;
+  padding: 15px 0px 15px 50px;
 }
