@@ -1,26 +1,9 @@
-.home-body
-  %h1 How do I use it?
-  We know that using the internets is a difficult thing, but thankfully data-snippet.io is easier to use than a pancake. 
+.groups-list{'data-bind': 'with: groupsListView'}
+  .groups-header
+    Groups groups yay
+  %ul{'data-bind': 'foreach: groups'}
+    %li{'data-bind': 'text: name'}
 
-  %h2 Step-by-step
-  %ul
-    %li Create an account here
-    %li Create a snippet
-    %li Find the newly created snippet under "my personal snippets", click it and find its ID.
-    %li Add the <b>data-snippet</b> attribute to the tag where you want the snippet included, and specify the ID as the attribute value. For example, if you want to include the snippet in a particular div and your snippet ID is 1337, add <b>data-snippet="1337"</b> to your div. Done.
-  
-  %h2 Code example
-  Say that you have the following code:
-  .demo-box-code
-    &lt;div&gt;(this text is a placeholder)&lt;/div&gt;
-  This would be displayed as:
-  .demo-box-result
-    (this text is a placeholder)
 
-  Now, let's say you add <b>data-snippet="6"</b> to that div:
-  .demo-box-code
-    &lt;div data-snippet="6"&gt;(this text is a placeholder)&lt;/div&gt;
-  then when the page loads, you would see:
-  .demo-box-result{ 'data-snippet': 6 }
-    (this text is a placeholder)
-  As you can see, the placeholder text is replaced when the snippet loads.
+%script{ type: 'text/javascript' }
+  ko.applyBindings(window.views.userHomeView);
